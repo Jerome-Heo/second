@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <title>Year Display</title>
+    <p>L'année actuelle est: <span id="year"></span></p>
+
+    <script>
+        fetch('/year')
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector("#year").textContent = data.year;
+        })
+    </script>
+</body>
+</html>
