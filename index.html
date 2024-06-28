@@ -9,12 +9,8 @@
     <title>Year Display</title>
     <p>L'année actuelle est: <span id="year"></span></p>
 
-    <script>
-        fetch('/year')
-        .then(response => response.json())
-        .then(data => {
-            document.querySelector("#year").textContent = data.year;
-        })
+    <script src = "script.js">
+
     </script>
 </body>
 </html>
